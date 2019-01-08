@@ -1,0 +1,27 @@
+<div class="container my-4">
+	<h1>Welcome</h1>
+	<p><b style="color:red">{{# each data}}{{this.username}}{{/each}}</b> you are successfully loggedin.</p>
+	<table class="table">
+		<thead class="thead-light">
+			<tr>
+				<th>Id</th>
+				<th>User</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Occupation</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			{{# each data}}
+			<td>{{this.id}}</td>
+			<td>{{this.username}}</td>
+			<td>{{this.fname}}</td>
+			<td>{{this.lname}}</td>
+			<td>{{this.occu}}</td>
+			{{/each}}
+		</tr>
+		</tbody>
+	</table>
+	<a href="/"><button class="btn btn-danger btn-md my-2" type="submit">Back</button></a>
+</div>
